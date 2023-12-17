@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Antonio Jesús Pozuelo - Taxista 🚕</title>
+    <meta name="description" content="Antonio Jesús Pozuelo: tu taxista de confianza en Pozoblanco, profesional y siempre a tu disposición. ¡Reserva ahora y viaja con tranquilidad!">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<style>
+    :root {
+        --happy-yellow: #7580BF;
+        --happy-blue: #121D59;
+        --happy-cream: #f5f5f5;
+        --happy-black: #0d0d0d;
+        --happy-grey: #AEB1BF;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: var(--happy-blue);
+        height: 100vh;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .container {
+        width: 300px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .links-container {
+        scroll-behavior: smooth;
+        margin: 5px auto;
+    }
+
+    .info-container {
+        margin-top: 20px; 
+        overflow: hidden;
+    }
+
+    .navbar {
+        background-color: var(--happy-yellow);
+        height: 70px;
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .image {
+        border: 0px solid var(--happy-cream);
+        height: 200px;
+        width: 200px;
+        border-radius: 100px;
+        margin: auto;
+        background: url("./foto-perfil-antonio-jesus.png") no-repeat center top/cover;
+    }
+
+    .name {
+        text-align: center;
+        color: var(--happy-black);
+        font-size: 2rem;
+    }
+
+    .name:hover {
+        color: var(--happy-cream);
+        font-size: 2.5rem;
+    }
+
+    .divider-custom {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--happy-cream);
+    }
+
+    .divider-custom.divider-light .divider-custom-line {
+        background-color: var(--happy-cream);
+    }
+
+    .divider-custom .divider-custom-line {
+        width: 100%;
+        max-width: 7rem;
+        height: 0.25rem;
+        background-color: var(--happy-cream);
+        border-radius: 1rem;
+        border-color: var(--happy-cream);
+    }
+
+    .divider-custom.divider-light .divider-custom-icon {
+        color: var(--happy-cream);
+    }
+
+    .divider-custom .divider-custom-icon {
+        color: var(--happy-cream);
+        font-size: 2rem;
+    }
+
+    .divider-custom-icon {
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .description {
+        text-align: center;
+        color: var(--happy-cream);
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    .profession {
+        text-align: center;
+        color: var(--happy-grey);
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    .link {
+        text-align: center;
+        height: 70px;
+        width: 100%;
+        background-color: var(--happy-yellow);
+        margin-top: 15px;
+        border-radius: 8px;
+        opacity: 0.96;
+        text-decoration: none;
+    }
+
+    .link:hover {
+        opacity: 0.9;
+    }
+
+    .link-icon {
+        font-size: 2rem;
+        float: left;
+        padding-right: 30px;
+        border-right: 3px solid var(--happy-black);
+    }
+
+    .link-text {
+        font-size: 1.5rem;
+        margin: 0;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        color: #000;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-weight: bolder;
+    }
+
+    .link-text:hover {
+        color: var(--happy-cream);
+        font-size: 1.5rem;
+    }
+
+    .platform {
+        color: var(--happy-black);
+        text-decoration: none;
+    }
+
+    .platform:hover {
+        color: var(--happy-cream) !important;
+        transform: scale(1.1);
+    }
+
+    .footer {      
+        width: 100%;
+        height: 50px;
+        background-color: var(--happy-black);
+        color: var(--happy-cream);
+        text-align: center;
+        font-weight: 100;
+        font-size: 1.5rem;
+        opacity: 0.96;
+        margin-top: 2rem;
+    }
+
+    .foot-text {
+        color: var(--happy-cream);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+    }
+
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .vertical-center {
+        margin: 0;
+        position: relative;
+        top: 50%;
+        left: 10%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .foot-link {
+        color: var(--happy-black);
+        text-decoration: none !important;
+        font-weight: 100 !important;
+    }
+
+    .foot-link:hover {
+        font-size: 1.25rem;
+        text-decoration: none !important;
+        font-weight: 900 !important;
+    }
+</style>
+<style>
+    .fa-taxi {
+        color: var(--happy-cream);
+        animation: iconAnimation 2s infinite alternate;
+    }
+
+    @keyframes iconAnimation {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.15);
+        }
+    }
+</style>
+<body>
+    <!-- <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav"></nav> -->
+
+    <div class="info-container container">
+        <div class="image"></div>       
+        <div class="description">Antonio Jesús Pozuelo</div>
+        <div class="profession">Taxista</div>
+    </div>
+
+    <!-- <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+            <i class="fas fa-taxi"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+    </div> -->
+
+    <div class="links-container container">
+        <!-- Phone -->
+        <a href="tel:+34622133933" class="platform">
+            <div id="phone" class="link">
+                <i class="vertical-center link-icon fa fa-phone"></i>
+                <p class="link-text">Llámame</p>
+            </div>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://api.whatsapp.com/send?phone=34622133933&text=Hola%20Antonio%20Jes%C3%BAs,%20" class="platform" target="_blank" rel="noopener noreferrer">
+            <div id="whatsapp" class="link">
+                <i class="vertical-center link-icon fab fa-whatsapp"></i>
+                <p class="link-text">WhatsApp</p>
+            </div>
+        </a>
+
+        <!-- Maps -->
+        <a href="https://maps.app.goo.gl/n5SdbmZJyHsdkEwR8" class="platform" target="_blank" rel="noopener noreferrer">
+            <div id="maps" class="link">
+                <i class="vertical-center link-icon fa fa-regular fa-star"></i>
+                <p class="link-text">Valórame</p>
+            </div>
+        </a>    
+    </div>
+    <div class="footer">
+        <span class="foot-text template-text">
+            <span>Copyright © 2023 antoniojpozuelo.com          
+        </span>
+    </div>
+</body>
+</html>
