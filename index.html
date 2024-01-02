@@ -3,212 +3,165 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Antonio Jesús Pozuelo - Taxista 🚕</title>
-    <meta name="description" content="Antonio Jesús Pozuelo: tu taxista de confianza en Pozoblanco, profesional y siempre a tu disposición. ¡Reserva ahora y viaja con tranquilidad!">
+    <meta name="description" content="Tu taxista de confianza en Pozoblanco. Profesional y siempre a tu disposición. ¡Reserva ahora y viaja con tranquilidad!">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --happy-yellow: #7580BF;
+            --happy-blue: #121D59;
+            --happy-cream: #f5f5f5;
+            --happy-black: #0d0d0d;
+            --happy-grey: #AEB1BF;
+        }
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--happy-blue);
+            font-family: 'Lato', sans-serif;
+        }       
+
+        .container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px; 
+            gap: 1rem;
+        }
+
+        .container > * {
+            width: 100%;
+        }
+    
+        .avatar {
+            height: 230px;
+            width: 230px;
+            background: url("/assets/images/antonio-jesus-pozuelo-taxista.png") no-repeat center top/cover;
+            margin-top: 1rem;
+        }
+    
+        .name {
+            text-align: center;
+            color: var(--happy-cream);
+            font-size: 2rem;
+        }
+    
+        .profession {          
+            text-align: center;  
+            color: var(--happy-grey);
+            font-weight: normal;
+            font-size: 1.6rem;
+        }
+    
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }  
+        
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1.1rem;
+            background-color: var(--happy-yellow);
+            color: #000;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+    
+        .link:hover {
+            opacity: 0.7;
+        }
+    
+        .link-icon {
+            width: 35px;
+            height: 35px;
+        }
+    
+        .icon-whatsapp{
+            background-image: url('/assets/icons/whatsapp.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
+        .icon-phone{
+            background-image: url('/assets/icons/telefono.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
+        .icon-star{
+            background-image: url('/assets/icons/estrella.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
+        .link-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    
+        footer{
+            width: 100%;
+            text-align: center;
+            color: var(--happy-cream);
+            background-color: var(--happy-black);
+            font-size: 0.9rem;   
+            padding: 1rem;
+        }  
+    </style>
 </head>
-<style>
-    :root {
-        --happy-yellow: #7580BF;
-        --happy-blue: #121D59;
-        --happy-cream: #f5f5f5;
-        --happy-black: #0d0d0d;
-        --happy-grey: #AEB1BF;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        background-color: var(--happy-blue);
-        /* height: 100vh; */
-        font-family: 'Lato', sans-serif;
-    }
-
-    .container {
-        width: 300px;      
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin: auto;
-        min-height: 100vh;
-        padding-top: 0.5rem;
-    }
-
-    .links-container {
-        scroll-behavior: smooth;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 1.5rem;
-    }
-   
-    .image {
-        height: 200px;
-        width: 200px;
-        margin: auto;
-        background: url("./foto-perfil-antonio-jesus.png") no-repeat center top/cover;
-    }
-
-    .name {
-        text-align: center;
-        color: var(--happy-black);
-        font-size: 2rem;
-    }
-
-    .name:hover {
-        color: var(--happy-cream);
-        font-size: 2.5rem;
-    } 
-
-    .description {
-        text-align: center;
-        color: var(--happy-cream);
-        font-size: 2rem;
-        margin-top: 20px;
-    }
-
-    .profession {
-        text-align: center;
-        color: var(--happy-grey);
-        font-size: 2rem;
-        margin-top: 10px;
-    }
-
-    .link {
-        text-align: center;
-        height: 70px;
-        background-color: var(--happy-yellow);       
-        border-radius: 8px;
-        opacity: 0.96;
-        text-decoration: none;
-    }
-
-    .link:hover {
-        opacity: 0.9;
-    }
-
-    .link-icon {
-        font-size: 2rem;
-        float: left;
-        padding-right: 30px;
-        border-right: 3px solid var(--happy-black);
-    }
-
-    .link-text {
-        font-size: 1.5rem;
-        margin: 0;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        color: #000;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        font-weight: bolder;
-    }
-
-    .link-text:hover {
-        color: var(--happy-cream);
-        font-size: 1.5rem;
-    }
-
-    .platform {
-        color: var(--happy-black);
-        text-decoration: none;
-    }
-
-    .platform:hover {
-        color: var(--happy-cream) !important;
-        transform: scale(1.1);
-    }
-
-    footer{
-        color: var(--happy-cream);
-        background-color: var(--happy-black);
-        height: 50px;
-        font-size: 0.75rem;
-        text-transform: uppercase;        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1rem;
-    }   
-
-    .vertical-center {
-        margin: 0;
-        position: relative;
-        top: 50%;
-        left: 10%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
-</style>
-<style>
-    .fa-taxi {
-        color: var(--happy-cream);
-        animation: iconAnimation 2s infinite alternate;
-    }
-
-    @keyframes iconAnimation {
-        0% {
-            transform: scale(1);
-        }
-        100% {
-            transform: scale(1.15);
-        }
-    }
-</style>
 <body>
-    <div class="container">
-        <div>
-            <div class="image"></div>       
-            <div class="description">Antonio Jesús Pozuelo</div>
-            <div class="profession">Taxista</div>
-        </div>
+    <main class="container">       
+        <div class="avatar"></div>       
+        <h1 class="name">Antonio Jesús Pozuelo</h1>
+        <h2 class="profession">Taxista en Pozoblanco</h2>       
     
         <div class="links-container">
             <!-- Phone -->
-            <a href="tel:+34622133933" class="platform">
-                <div id="phone" class="link">
-                    <i class="vertical-center link-icon fa fa-phone"></i>
-                    <p class="link-text">Llámame</p>
-                </div>
+            <a href="tel:+34622133933" class="link">                
+                <i class="link-icon icon-phone"></i>
+                <span class="link-text">Llámame</span>                
             </a>
     
             <!-- WhatsApp -->
-            <a href="https://api.whatsapp.com/send?phone=34622133933&text=Hola%20Antonio%20Jes%C3%BAs,%20" class="platform" target="_blank" rel="noopener noreferrer">
-                <div id="whatsapp" class="link">
-                    <i class="vertical-center link-icon fab fa-whatsapp"></i>
-                    <p class="link-text">WhatsApp</p>
-                </div>
+            <a href="https://api.whatsapp.com/send?phone=34622133933&text=Hola%20Antonio%20Jes%C3%BAs,%20" class="link" target="_blank" rel="noopener noreferrer">
+                <i class="link-icon icon-whatsapp"></i>
+                <span class="link-text">WhatsApp</span>                
             </a>
     
             <!-- Maps -->
-            <a href="https://maps.app.goo.gl/n5SdbmZJyHsdkEwR8" class="platform" target="_blank" rel="noopener noreferrer">
-                <div id="maps" class="link">
-                    <i class="vertical-center link-icon fa fa-regular fa-star"></i>
-                    <p class="link-text">Valórame</p>
-                </div>
+            <a href="https://maps.app.goo.gl/n5SdbmZJyHsdkEwR8" class="link" target="_blank" rel="noopener noreferrer">
+                <i class="link-icon icon-star"></i>
+                <span class="link-text">Valórame</span>                
             </a>    
         </div>
-    </div>   
+    </main>   
     
     <footer class="footer">
         <p>Copyright © 2023 antoniojpozuelo.com</p>
