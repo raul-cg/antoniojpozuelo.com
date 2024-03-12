@@ -134,6 +134,27 @@
             font-size: 0.9rem;   
             padding: 1rem;
         }  
+
+        .nap a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .nap a:hover{
+            color: var(--happy-yellow);
+        }
+
+        .nap__phone{
+            border-left: 2px solid var(--happy-cream);
+            border-right: 2px solid var(--happy-cream);
+            padding: 0 0.5rem;
+            margin: 0 0.5rem;
+        }
+
+        .copyright{
+            color: var(--happy-grey);
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -144,7 +165,7 @@
     
         <div class="links-container">
             <!-- Phone -->
-            <a href="tel:622133933" class="link">                
+            <a href="tel:622133933" class="link" target="_blank" rel="noopener noreferrer">                
                 <i class="link-icon icon-phone"></i>
                 <span class="link-text">Llámame</span>                
             </a>
@@ -164,7 +185,20 @@
     </main>   
     
     <footer class="footer">
-        <p>Copyright © 2023 antoniojpozuelo.com</p>
+        <div class="nap">
+            <a href="https://maps.app.goo.gl/158ppJbHDEqKgNts8" target="_blank" rel="noopener noreferrer">
+                TAXI POZOBLANCO 🥇 Antonio Jesús Pozuelo         
+            </a>
+            <a class="nap__phone" href="tel:622133933" target="_blank" rel="noopener noreferrer">
+                622 13 39 33
+            </a>
+            <a href="https://maps.app.goo.gl/158ppJbHDEqKgNts8" target="_blank" rel="noopener noreferrer">
+                C. Hinojosa del Duque, 3, 14400 Pozoblanco, Córdoba            
+            </a>
+        </div>
+        <div class="copyright">
+            Copyright © 2023 antoniojpozuelo.com
+        </div>        
     </footer>
 </body>
 </html>
