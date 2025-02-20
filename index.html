@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>>> TAXI POZOBLANCO | Antonio Jesús Pozuelo</title>
-    <meta name="description" content="Servicio de taxi premium en Pozoblanco con Antonio Jesús Pozuelo. Disponible 24/7, puntualidad y confort. Reserva ya y viaja con estilo. Contacto: 622 13 39 33.">
+    <title>Taxi en Pozoblanco - Servicio 24h | Antonio Jesús Pozuelo</title>
+    <meta name="description" content="Taxi en Pozoblanco con servicio 24h. Rápido, cómodo y seguro. Reserva tu viaje con Antonio Jesús Pozuelo. ¡Llámame ahora!">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -24,6 +24,7 @@
             --happy-cream: #f5f5f5;
             --happy-black: #0d0d0d;
             --happy-grey: #AEB1BF;
+            --happy-mustard: #8e6000;
         }
     
         * {
@@ -57,17 +58,16 @@
         .avatar {
             height: 230px;
             width: 230px;
-            background: url("/assets/images/antonio-jesus-pozuelo-taxista.png") no-repeat center top/cover;
             margin-top: 1rem;
         }
     
-        .name {
+        h1 {
             text-align: center;
             color: var(--happy-cream);
             font-size: 2rem;
         }
     
-        .profession {          
+        h2 {          
             text-align: center;  
             color: var(--happy-grey);
             font-weight: normal;
@@ -89,7 +89,7 @@
             gap: 1.5rem;
             padding: 1.1rem;
             background-color: var(--happy-yellow);
-            color: #000;
+            color: var(--happy-black);
             border-radius: 8px;
             text-decoration: none;
         }
@@ -131,9 +131,14 @@
             text-align: center;
             color: var(--happy-cream);
             background-color: var(--happy-black);
-            font-size: 0.9rem;   
-            padding: 1rem;
+            padding: 1.5rem;
         }  
+
+        .nap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         .nap a{
             text-decoration: none;
@@ -144,16 +149,87 @@
             color: var(--happy-yellow);
         }
 
-        .nap__phone{
+        .nap__address{
             border-left: 2px solid var(--happy-cream);
             border-right: 2px solid var(--happy-cream);
             padding: 0 0.5rem;
             margin: 0 0.5rem;
         }
 
+        .nap__facebook {
+            font-size: 1.5rem;
+            color: var(--happy-cream);
+        }
+
         .copyright{
             color: var(--happy-grey);
-            margin-top: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .separator {
+            width: 90%;
+            height: 2px;
+            background-color: var(--happy-grey);
+            opacity: 0.5;
+        }
+
+        .service-description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+        }
+
+        .service-description img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            background-color: var(--happy-mustard);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-description p {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: var(--happy-cream);
+        }
+
+        .service-description a {
+            color: var(--happy-mustard);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .service-description a:hover {
+            text-decoration: underline;
+            color: var(--happy-yellow);
+        }
+        
+        .call-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--happy-mustard);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px var(--happy-black);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .call-button img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .call-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
         }
     </style>
 
@@ -204,46 +280,68 @@
 </head>
 <body>
     <main class="container" data-nosnippet>       
-        <div class="avatar"></div>       
-        <h1 class="name">Antonio Jesús Pozuelo</h1>
-        <h2 class="profession">Taxista en Pozoblanco</h2>       
+        <img class="avatar" title="Antonio Jesús Pozuelo" src="/assets/images/antonio-jesus-pozuelo-taxista.png" alt="Antonio Jesús Pozuelo, taxista en Pozoblanco">
+        
+        <h1>TAXI POZOBLANCO</h1>       
+        <h2>Antonio Jesús Pozuelo</h2>
     
-        <div class="links-container">
+        <section class="links-container">
             <!-- Phone -->
-            <a href="tel:622133933" class="link" target="_blank" rel="noopener noreferrer">                
+            <a title="Llámame" href="tel:622133933" class="link" target="_blank" rel="noopener noreferrer">                
                 <i class="link-icon icon-phone"></i>
                 <span class="link-text">Llámame</span>                
             </a>
     
             <!-- WhatsApp -->
-            <a href="https://wa.me/34622133933?text=Hola%20Antonio%20Jes%C3%BAs,%20" class="link" target="_blank" rel="noopener noreferrer">
+            <a title="Envíame un WhatsApp" href="https://wa.me/34622133933?text=Hola%20Antonio%20Jes%C3%BAs,%20" class="link" target="_blank" rel="noopener noreferrer">
                 <i class="link-icon icon-whatsapp"></i>
                 <span class="link-text">WhatsApp</span>                
             </a>
     
             <!-- Maps -->
-            <a href="https://g.page/r/CXgmXJaq8dXPEBM/review" class="link" target="_blank" rel="noopener noreferrer">
+            <a title="Déjame una reseña en Google Maps" href="https://g.page/r/CXgmXJaq8dXPEBM/review" class="link" target="_blank" rel="noopener noreferrer">
                 <i class="link-icon icon-star"></i>
                 <span class="link-text">Valórame</span>                
             </a>    
-        </div>
-    </main>   
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="service-description">
+            <img class="mondeo" src="/assets/images/taxi-pozoblanco-antonio-jesus.png" 
+                 alt="Taxi en Pozoblanco - Vehículo de Antonio Jesús Pozuelo">
+            <p>
+                Viaja con comodidad y seguridad en mi <strong>taxi en Pozoblanco</strong>. 
+                Vehículo amplio, limpio y equipado para ofrecerte el mejor servicio 24 horas. 
+                <a title="Pide tu taxi" href="tel:622133933">¡Reserva tu viaje ahora!</a>
+            </p>
+        </section>
+    </main>         
     
     <footer class="footer" data-nosnippet>
         <div class="nap">
-            <a href="https://maps.app.goo.gl/158ppJbHDEqKgNts8" target="_blank" rel="noopener noreferrer">
-                TAXI POZOBLANCO 🥇 Antonio Jesús Pozuelo         
-            </a>
-            <a class="nap__phone" href="tel:622133933" target="_blank" rel="noopener noreferrer">
+            <a title="Teléfono" href="tel:622133933" target="_blank" rel="noopener noreferrer">
                 622 13 39 33
             </a>
-            <a href="https://maps.app.goo.gl/158ppJbHDEqKgNts8" target="_blank" rel="noopener noreferrer">
+            <a title="Ver ficha en Google Maps" class="nap__address" href="https://maps.app.goo.gl/158ppJbHDEqKgNts8" target="_blank" rel="noopener noreferrer">
                 C. Hinojosa del Duque, 3, 14400 Pozoblanco, Córdoba            
+            </a>
+            <a href="https://www.facebook.com/antoniojesuspozuelo" 
+                target="_blank" 
+                class="nap__facebook"
+                rel="noopener noreferrer" 
+                title="Sígueme en Facebook">
+                <img src="/assets/icons/facebook.png" alt="Facebook" width="24" height="24">
             </a>
         </div>
         <div class="copyright">
-            Copyright © 2023 antoniojpozuelo.com
+            Copyright © 2025 antoniojpozuelo.com
         </div>        
     </footer>
+
+    <a href="tel:622133933" class="call-button" title="Llamar a Antonio Jesús Pozuelo">
+        <img src="/assets/icons/telefono.svg" alt="Llamar">
+    </a> 
+
 </body>
 </html>
