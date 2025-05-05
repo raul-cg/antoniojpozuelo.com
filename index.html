@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Taxi en Pozoblanco - Servicio 24h | Antonio Jesús Pozuelo</title>
-    <meta name="description" content="Taxi en Pozoblanco con servicio 24h. Rápido, cómodo y seguro. Reserva tu viaje con Antonio Jesús Pozuelo. ¡Llámame ahora!">
+    <title>Taxi Pozoblanco - Servicio 24h | Antonio Jesús Pozuelo</title>
+    <meta name="description" content="Taxi en Pozoblanco con servicio 24h. Viajes locales, aeropuertos, estaciones y eventos. Rápido, cómodo y seguro. Reserva tu viaje con Antonio Jesús Pozuelo. ¡Llámame ahora!">
+    <meta name="keywords" content="taxi pozoblanco, taxi los pedroches, taxi cordoba, antonio jesus pozuelo, servicio 24h">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -15,16 +16,19 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <style>
         :root {
-            --happy-yellow: #7580BF;
-            --happy-blue: #121D59;
-            --happy-cream: #f5f5f5;
-            --happy-black: #0d0d0d;
-            --happy-grey: #AEB1BF;
-            --happy-mustard: #8e6000;
+            --primary-color: #7580BF;
+            --secondary-color: #121D59;
+            --light-color: #f5f5f5;
+            --dark-color: #0d0d0d;
+            --gray-color: #AEB1BF;
+            --accent-color: #FFD700;
+            --shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
         }
     
         * {
@@ -38,8 +42,9 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            background-color: var(--happy-blue);
+            background-color: var(--secondary-color);
             font-family: 'Lato', sans-serif;
+            line-height: 1.6;
         }       
 
         .container {
@@ -47,39 +52,62 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 300px; 
-            gap: 1rem;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
         }
 
-        .container > * {
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 100%;
+            padding: 2rem 0;
+            text-align: center;
         }
-    
+
         .avatar {
             height: 230px;
             width: 230px;
-            margin-top: 1rem;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .avatar:hover {
+            transform: scale(1.05);
         }
     
         h1 {
-            text-align: center;
-            color: var(--happy-cream);
-            font-size: 2rem;
+            color: var(--light-color);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
     
         h2 {          
-            text-align: center;  
-            color: var(--happy-grey);
+            color: var(--gray-color);
             font-weight: normal;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        h3 {
+            color: var(--accent-color);
             font-size: 1.6rem;
+            margin: 1.5rem 0;
+            text-align: center;
         }
     
         .links-container {
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
+            width: 100%;
+            max-width: 500px;
+            margin: 1.5rem 0;
         }  
         
         .link {
@@ -88,14 +116,18 @@
             justify-content: center;
             gap: 1.5rem;
             padding: 1.1rem;
-            background-color: var(--happy-yellow);
-            color: var(--happy-black);
-            border-radius: 8px;
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            border-radius: 12px;
             text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
         }
     
         .link:hover {
-            opacity: 0.7;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            background-color: var(--accent-color);
         }
     
         .link-icon {
@@ -125,100 +157,195 @@
             font-size: 1.5rem;
             font-weight: bold;
         }
-    
-        footer{
+        
+        section {
             width: 100%;
-            text-align: center;
-            color: var(--happy-cream);
-            background-color: var(--happy-black);
+            max-width: 900px;
+            margin: 2rem 0;
             padding: 1.5rem;
-        }  
-
-        .nap{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
         }
-
-        .nap a{
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .nap a:hover{
-            color: var(--happy-yellow);
-        }
-
-        .nap__phone{
-            border-right: 2px solid var(--happy-cream);
-            padding: 0 0.5rem;
-            margin: 0 0.5rem;
-        }
-
-        .nap__facebook {
-            font-size: 1.5rem;
-            color: var(--happy-cream);
-        }
-
-        .copyright{
-            color: var(--happy-grey);
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
             margin-top: 1rem;
         }
-
-        .separator {
-            width: 90%;
-            height: 2px;
-            background-color: var(--happy-grey);
-            opacity: 0.5;           
+        
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-
+    
+        .service-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .service-card h4 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            height: 2.8em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .service-card p {
+            color: var(--light-color);
+            font-size: 1rem;
+        }
+        
+        .testimonials {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .testimonial {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .testimonial p {
+            color: var(--light-color);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonial .author {
+            color: var(--gray-color);
+            text-align: right;
+            font-weight: bold;
+        }
+        
+        .rates {
+            color: var(--light-color);
+        }
+        
+        .rates ul {
+            list-style-type: none;
+            margin: 1rem 0;
+        }
+        
+        .rates li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .rates .price {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
         .service-description {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-top: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .service-description img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            background-color: var(--happy-mustard);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
-
-        .service-description p {
-            margin-top: 1rem;
-            font-size: 1.2rem;
-            color: var(--happy-cream);
-        }
-
-        .service-description a {
-            color: var(--happy-mustard);
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .service-description a:hover {
-            text-decoration: underline;
-            color: var(--happy-yellow);
+            color: var(--light-color);
         }
         
+        .service-description p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        }
+                
+        footer {
+            width: 100%;
+            background-color: var(--dark-color);
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nap a {
+            text-decoration: none;
+            color: var(--light-color);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nap a:hover {
+            color: var(--accent-color);
+        }
+
+        .nap__phone {
+            border-right: 2px solid var(--gray-color);
+            padding-right: 1rem;
+        }
+
+        .copyright {
+            color: var(--gray-color);
+            text-align: center;
+            margin-top: 1rem;
+        }
+
         .call-button {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: var(--happy-mustard);
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background-color: var(--accent-color);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 10px var(--happy-black);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            z-index: 999;
         }
 
         .call-button img {
@@ -227,17 +354,60 @@
         }
 
         .call-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Responsive design */
+        /* Media query para pantallas grandes */
+        @media (min-width: 1200px) {
+            .services {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        /* Media query para tablets */
+        @media (min-width: 769px) and (max-width: 1199px) {
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Media query para móviles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .services {
+                grid-template-columns: 1fr;
+            }
+            
+            .nap {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .nap__phone {
+                border-right: none;
+                padding-right: 0;
+                border-bottom: 2px solid var(--gray-color);
+                padding-bottom: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
         }
     </style>
 
-    <!-- Marcado JSON-LD generado por el Asistente para el marcado de datos estructurados de Google. -->
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
             "@type": ["LocalBusiness","TaxiService"],
-            "name": "TAXI POZOBLANCO 🥇 Antonio Jesús Pozuelo",
+            "name": "TAXI POZOBLANCO - Antonio Jesús Pozuelo",
+            "description": "Servicio de taxi en Pozoblanco disponible 24/7. Ofrezco viajes locales, traslados a aeropuertos, estaciones de tren y eventos especiales. Vehículo moderno y confortable.",
             "telephone": "+34622133933",
             "email": "antoniojpozuelo@gmail.com",
             "url": "https://antoniojpozuelo.com",
@@ -248,6 +418,11 @@
                 "addressRegion": "Córdoba",
                 "postalCode": "14400",
                 "addressCountry": "ES"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "38.38405",
+                "longitude": "-4.84784"
             },
             "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -263,79 +438,167 @@
                 "opens": "00:00",
                 "closes": "23:59"
             },
-            "keywords": "taxi, transporte, viaje, transporte de pasajeros",
+            "keywords": "taxi pozoblanco, taxi los pedroches, taxi cordoba, transporte, viaje, traslado aeropuerto, servicio 24 horas",
             "logo": "https://antoniojpozuelo.com/assets/images/logo.jpg",
             "image": [
-                "https://antoniojpozuelo.com/assets/images/tarjeta-de-visita.jpg"
+                "https://antoniojpozuelo.com/assets/images/tarjeta-de-visita.jpg",
+                "https://antoniojpozuelo.com/assets/images/antonio-jesus-pozuelo-taxista.png"
             ],
-            "paymentAccepted": "Efectivo, Tarjeta de crédito",
-            "areaServed": ["Pozoblanco", "Valle de Los Pedroches"],
+            "paymentAccepted": "Efectivo, Tarjeta de crédito, Transferencia bancaria",
+            "priceRange": "$$",
+            "areaServed": ["Pozoblanco", "Valle de Los Pedroches", "Córdoba"],
             "sameAs": [
                 "https://www.facebook.com/antoniojesuspozuelo/",
                 "https://maps.app.goo.gl/158ppJbHDEqKgNts8"
+            ],
+            "review": [
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "MAIBELYN CONTRERAS"
+                    },
+                    "reviewBody": "Excelente servicio! Lo recomiendo, súper puntual"
+                },                
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Montserrat Cabezas"
+                    },
+                    "reviewBody": "Un viaje perfecto,muy atento con todo, se adapto a nuestras necesidades,volvería a repetir con él sin dudarlo."
+                },
+                {
+                    "@type": "Review",
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                    },
+                    "author": {
+                        "@type": "Person",
+                        "name": "Pedro José Herrero"
+                    },
+                    "reviewBody": "Antonio Jesús es un gran profesional al volante. Atento, cercano y con mucha experiencia. Ya sea para alguna urgencia entre semana o para algún evento durante el fin de semana, muestra siempre disponibilidad. 100% recomendado."
+                }
             ]
         }
     </script>
 </head>
 <body>
-    <main class="container" data-nosnippet>       
-        <img class="avatar" title="Antonio Jesús Pozuelo" src="/assets/images/antonio-jesus-pozuelo-taxista.png" alt="Antonio Jesús Pozuelo, taxista en Pozoblanco">
+    <div class="container">
+        <header>       
+            <img class="avatar" title="Antonio Jesús Pozuelo" src="/assets/images/antonio-jesus-pozuelo-taxista.png" alt="Antonio Jesús Pozuelo, taxista en Pozoblanco">
+            
+            <h1>TAXI POZOBLANCO</h1>       
+            <h2>Antonio Jesús Pozuelo</h2>
         
-        <h1>TAXI POZOBLANCO</h1>       
-        <h2>Antonio Jesús Pozuelo</h2>
-    
-        <section class="links-container">
-            <!-- Phone -->
-            <a title="Llámame" href="tel:+34622133933" class="link" target="_blank" rel="noopener noreferrer">                
-                <i class="link-icon icon-phone"></i>
-                <span class="link-text">Llámame</span>                
-            </a>
-    
-            <!-- WhatsApp -->
-            <a title="Envíame un WhatsApp" href="https://wa.me/34622133933?text=Hola%20Antonio%20Jes%C3%BAs,%20" class="link" target="_blank" rel="noopener noreferrer">
-                <i class="link-icon icon-whatsapp"></i>
-                <span class="link-text">WhatsApp</span>                
-            </a>
-    
-            <!-- Maps -->
-            <a title="Déjame una reseña en Google Maps" href="https://g.page/r/CXgmXJaq8dXPEBM/review" class="link" target="_blank" rel="noopener noreferrer">
-                <i class="link-icon icon-star"></i>
-                <span class="link-text">Valórame</span>                
-            </a>    
-        </section>
-
-        <div class="separator"></div>
+            <section class="links-container">
+                <!-- Phone -->
+                <a title="Llámame" href="tel:+34622133933" class="link" target="_blank" rel="noopener noreferrer">                
+                    <i class="link-icon icon-phone"></i>
+                    <span class="link-text">Llámame</span>                
+                </a>
+        
+                <!-- WhatsApp -->
+                <a title="Envíame un WhatsApp" href="https://wa.me/34622133933?text=Hola%20Antonio%20Jes%C3%BAs,%20" class="link" target="_blank" rel="noopener noreferrer">
+                    <i class="link-icon icon-whatsapp"></i>
+                    <span class="link-text">WhatsApp</span>                
+                </a>
+        
+                <!-- Maps -->
+                <a title="Déjame una reseña en Google Maps" href="https://g.page/r/CXgmXJaq8dXPEBM/review" class="link" target="_blank" rel="noopener noreferrer">
+                    <i class="link-icon icon-star"></i>
+                    <span class="link-text">Valórame</span>                
+                </a>    
+            </section>
+        </header>
 
         <section class="service-description">
-            <img class="mondeo" src="/assets/images/taxi-pozoblanco-antonio-jesus.png" 
-                 alt="Taxi en Pozoblanco - Vehículo de Antonio Jesús Pozuelo">
-            <p>
-                Viaja con comodidad y seguridad en mi <strong>taxi en Pozoblanco</strong>. 
-                Vehículo amplio, limpio y equipado para ofrecerte el mejor servicio 24 horas. 
-                <a title="Pide tu taxi" href="tel:+34622133933">¡Reserva tu viaje ahora!</a>
-            </p>
+            <h3>Servicio de Taxi 24/7</h3>
+            <p>Bienvenido a mi servicio de taxi en Pozoblanco. Ofrezco traslados cómodos, seguros y puntuales las 24 horas del día, 7 días a la semana.</p>
+            <p>Mi compromiso es brindarte la mejor experiencia en cada viaje, sea cual sea tu destino.</p>
+            <a href="tel:+34622133933" class="cta-button">Reserva Ahora</a>
         </section>
-    </main>         
+        
+        <section>
+        <h3>Mis Servicios</h3>
+            <div class="services">
+                <div class="service-card">
+                <i class="fas fa-taxi fa-3x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h4>Servicio Local</h4>
+                <p>Traslados dentro de Pozoblanco y alrededores con la máxima comodidad y puntualidad.</p>
+                </div>
+                <div class="service-card">
+                <i class="fas fa-plane-departure fa-3x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h4>Aeropuertos, Estaciones</h4>
+                <p>Traslados a aeropuertos, estaciones de tren y autobús en Córdoba, Sevilla, Madrid y más.</p>
+                </div>
+                <div class="service-card">
+                <i class="fas fa-glass-cheers fa-3x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h4>Eventos Especiales</h4>
+                <p>Bodas, celebraciones, conciertos y todo tipo de eventos. Servicio personalizado.</p>
+                </div>
+                <div class="service-card">
+                <i class="fas fa-hospital-user fa-3x" style="color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h4>Servicios Médicos</h4>
+                <p>Acompaño a pacientes a mutuas, hospitales, centros de diálisis o clínicas.</p>
+                </div>
+            </div>
+        </section>       
+                
+        <section class="testimonials">
+            <h3>Lo que dicen mis clientes</h3>
+          
+            <div class="testimonial">
+              <p>"Excelente servicio! Lo recomiendo, súper puntual"</p>
+              <div class="author">- MAIBELYN CONTRERAS</div>
+            </div>
+          
+            <div class="testimonial">
+              <p>"Un viaje perfecto, muy atento con todo, se adaptó a nuestras necesidades, volvería a repetir con él sin dudarlo."</p>
+              <div class="author">- Montserrat Cabezas</div>
+            </div>
+          
+            <div class="testimonial">
+              <p>"Antonio Jesús es un gran profesional al volante. Atento, cercano y con mucha experiencia. Ya sea para alguna urgencia entre semana o para algún evento durante el fin de semana, muestra siempre disponibilidad. 100% recomendado."</p>
+              <div class="author">- Pedro José Herrero</div>
+            </div>
+          </section> 
+    </div>         
     
-    <footer class="footer" data-nosnippet>
-        <div class="nap">
-            <a href="https://www.facebook.com/antoniojesuspozuelo" 
-                target="_blank" 
-                class="nap__facebook"
-                rel="noopener noreferrer" 
-                title="Sígueme en Facebook">
-                <img src="/assets/icons/facebook.png" alt="Facebook" width="24" height="24">
-            </a>
-            <a title="Teléfono" class="nap__phone" href="tel:+34622133933" target="_blank" rel="noopener noreferrer">
-                622 13 39 33
-            </a>
-            <a title="Ver ficha en Google Maps" href="https://maps.app.goo.gl/158ppJbHDEqKgNts8" target="_blank" rel="noopener noreferrer">
-                C. Hinojosa del Duque, 3, 14400 Pozoblanco, Córdoba            
-            </a>            
+    <footer>
+        <div class="footer-container">
+            <div class="nap">
+                <a href="https://www.facebook.com/antoniojesuspozuelo" 
+                    target="_blank" 
+                    class="nap__facebook"
+                    rel="noopener noreferrer" 
+                    title="Sígueme en Facebook">
+                    <img src="/assets/icons/facebook.png" alt="Facebook" width="24" height="24">
+                    Facebook
+                </a>
+                <a title="Teléfono" class="nap__phone" href="tel:+34622133933" target="_blank" rel="noopener noreferrer">
+                    622 13 39 33
+                </a>
+                <a title="Ver ficha en Google Maps" href="https://maps.app.goo.gl/158ppJbHDEqKgNts8" target="_blank" rel="noopener noreferrer">
+                    C. Hinojosa del Duque, 3, 14400 Pozoblanco, Córdoba            
+                </a>            
+            </div>
+            <div class="copyright">
+                Copyright © 2025 antoniojpozuelo.com | Licencia de taxi nº 2 Pozoblanco
+            </div>        
         </div>
-        <div class="copyright">
-            Copyright © 2025 antoniojpozuelo.com
-        </div>        
     </footer>
 
     <a href="tel:+34622133933" class="call-button" title="Llamar a Antonio Jesús Pozuelo">
